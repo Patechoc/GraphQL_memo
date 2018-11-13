@@ -1,5 +1,5 @@
 # source: https://swapi.graph.cool/
-# timestamp: Tue Nov 13 2018 10:23:23 GMT+0100 (CET)
+# timestamp: Tue Nov 13 2018 14:29:11 GMT+0100 (CET)
 
 enum _ModelMutationType {
   CREATED

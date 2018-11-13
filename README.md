@@ -26,9 +26,18 @@ To learn more and test online: [GraphiQL](https://github.com/graphql/graphiql) (
 
 
 
+
+
+
+
+
+
 ## GraphQL CLI
 
 https://github.com/graphql-cli/graphql-cli
+
+
+Simply start it with `graphql init`
 
 
 ```shell
@@ -67,3 +76,76 @@ About to write to /home/patrick/Documents/dev/graphQL_test/.graphqlconfig:
 project swapi - endpoint default - Schema file was created: schema.graphql
 (gcp) patrick@cx18:~/Documents/dev/graphQL_test$
 ```
+
+Check the resulting schema `./schema.graphql`
+
+```sql
+# source: https://swapi.graph.cool/
+# timestamp: Tue Nov 13 2018 14:29:11 GMT+0100 (CET)
+
+enum _ModelMutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
+"""Meta information about the query."""
+type _QueryMeta {
+  count: Int!
+}
+
+type AddToFilmPlanetsPayload {
+  filmsFilm: Film
+  planetsPlanet: Planet
+}
+
+type AddToFilmSpeciesPayload {
+  filmsFilm: Film
+  speciesSpecies: Species
+}
+
+type AddToFilmStarshipsPayload {
+  filmsFilm: Film
+  starshipsStarship: Starship
+}
+...
+```
+
+
+
+
+
+
+
+
+## GraphiQL
+
+* "Install" GraphiQL using the AppImage:
+  * Download the [GrapiQL App Image](https://github.com/skevy/graphiql-app/releases/download/v0.6.3/graphiql-app-0.6.3-x86_64.AppImage)
+  * [How to use AppImage in Linux](https://itsfoss.com/use-appimage-linux/)
+  * double-click on it to run it
+  * open a GraphQL URL and start making requests
+      * [online example](https://graphql-compose-swapi.herokuapp.com/?query=%7B%0A%20%20films%20%7B%0A%20%20%20%20title%0A%20%20%20%20episode_id%0A%20%20%20%20opening_crawl%0A%20%20%20%20director%0A%20%20%20%20producer%0A%20%20%20%20release_date%0A%20%20%20%20created%0A%20%20%20%20edited%0A%20%20%20%20url%0A%20%20%7D%0A%7D) 
+
+### Build your GraphQL schema from a REST API using GraphQL CLI
+
+Try it with a simple REST API, e.g. http://dummy.restapiexample.com/
+
+Not there yet... (resource to try: https://github.com/apollographql/apollo-link-rest)
+
+
+
+## GraphQL in Python
+
+example:
+ * [slides](bit.ly/py-graphql)/[video](https://www.youtube.com/watch?v=cKTbHph-wlk)
+    * graphene-python.org
+
+
+
+
+
+## Other References
+
+* [How to wrap a REST API with GraphQL - A 3-step tutorial](https://www.prisma.io/blog/how-to-wrap-a-rest-api-with-graphql-8bf3fb17547d/)
+* [Building GraphQL Schema from RESTful API](https://medium.com/@lyskos97/building-graphql-schema-from-rest-api-ee31ac12c57b)
