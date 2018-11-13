@@ -127,12 +127,14 @@ type AddToFilmStarshipsPayload {
   * open a GraphQL URL and start making requests
       * [online example](https://graphql-compose-swapi.herokuapp.com/?query=%7B%0A%20%20films%20%7B%0A%20%20%20%20title%0A%20%20%20%20episode_id%0A%20%20%20%20opening_crawl%0A%20%20%20%20director%0A%20%20%20%20producer%0A%20%20%20%20release_date%0A%20%20%20%20created%0A%20%20%20%20edited%0A%20%20%20%20url%0A%20%20%7D%0A%7D) 
 
-### Build your GraphQL schema from a REST API using GraphQL CLI
 
-Try it with a simple REST API, e.g. http://dummy.restapiexample.com/
+## Autogenerate your GraphQL schema (as much as possible)
 
-Not there yet... (resource to try: https://github.com/apollographql/apollo-link-rest)
+[Wrapping REST with GraphQL](https://www.youtube.com/watch?v=iW4il6wUlvs)
 
+Similar to OpenAPI/Swagger for REST APIs, you might want to avoid writing a GraphQL schema by manually.
+
+A great equivalent to these tools in GraphQL would probably come from the Apollo platform (www.apollographql.com). 
 
 
 ## GraphQL in Python
@@ -141,6 +143,14 @@ example:
  * [slides](bit.ly/py-graphql)/[video](https://www.youtube.com/watch?v=cKTbHph-wlk)
     * graphene-python.org
 
+
+
+
+## Build your GraphQL schema from a REST API using GraphQL CLI
+
+Try it with a simple REST API, e.g. http://dummy.restapiexample.com/
+
+Not there yet... (resource to try: https://github.com/apollographql/apollo-link-rest)
 
 
 
